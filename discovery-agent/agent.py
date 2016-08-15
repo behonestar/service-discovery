@@ -32,7 +32,7 @@ def get_services():
         value = json.loads(i.value)
         
         ep = services.setdefault(service, dict(port="", backends=[]))
-        ep["bindport"] = 80
+        ep["bindport"] = value["port"]
         ep["backends"].append(dict(name=container.replace("@",""), host=value["host"], port=value["port"]))
 
     return services
