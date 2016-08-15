@@ -14,7 +14,7 @@ This project is an example of service-discovery with CoreOS for microservices. `
   ```
 
 - ### redis-register unit
-  The `redis-register` is a sidekick unit of `redis` unit. It works on the same machine of `redis` unit. Also it registers host, port of `redis` unit with the etcd cluster. 
+  The `redis-register` is a sidekick unit of `redis` unit. It registers host, port of `redis` unit with the etcd cluster. Also it works on the same machine of `redis` unit.
   ```sh
   $ cd fleet-unit-files
   $ cp redis-register@.service /etc/systemd/system
@@ -24,7 +24,7 @@ This project is an example of service-discovery with CoreOS for microservices. `
 
 ## Worker
 - ### worker
-  Worker connects to the redis, and then set or get keys. It use `haproxy:80` as a hostname and a port of redis.
+  Worker uses `haproxy:80` as a `host:port` to connect to the Redis backend.
   ```sh
   $ cd worker
   $ docker build -t worker .
