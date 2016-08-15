@@ -10,7 +10,7 @@ This project is an example of service-discovery with CoreOS for microservices. `
   $ cd fleet-unit-files
   $ cp redis@.service /etc/systemd/system
   $ cd /etc/systemd/system
-  $ fleetdctl start redis@1
+  $ fleetctl start redis@1
   ```
 
 - ### redis-register unit
@@ -19,7 +19,7 @@ This project is an example of service-discovery with CoreOS for microservices. `
   $ cd fleet-unit-files
   $ cp redis-register@.service /etc/systemd/system
   $ cd /etc/systemd/system
-  $ fleetdctl start redis-register@1
+  $ fleetctl start redis-register@1
   ```
 
 ## Worker
