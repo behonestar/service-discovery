@@ -7,7 +7,7 @@ This project is an example of service-discovery with CoreOS for microservices. `
 - ### redis unit
   `redis` is a backend to store key-value from workers.
   ```sh
-  $ cd redis
+  $ cd fleet-unit-files
   $ cp redis@.service /etc/systemd/system
   $ cd /etc/systemd/system
   $ flletdctl start redis@1
@@ -16,7 +16,7 @@ This project is an example of service-discovery with CoreOS for microservices. `
 - ### redis-register unit
   The `redis-register` is a sidekick unit of `redis` unit. It works on the same machine of `redis` unit. Also it registers host, port of `redis` unit with the etcd cluster. 
   ```sh
-  $ cd redis-register
+  $ cd fleet-unit-files
   $ cp redis-register@.service /etc/systemd/system
   $ cd /etc/systemd/system
   $ flletdctl start redis-register@1
