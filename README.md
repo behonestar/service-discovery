@@ -32,7 +32,7 @@ This project is an example of service-discovery with CoreOS for microservices. `
   ```
   
 - ### discovery-agent
-  The discovery-agent get `redis` unit info from etcd and update `HAProxy` configurations. `HAProxy` is bound to port number `80`.
+  The discovery-agent gets `redis` unit info from the etcd and update `HAProxy` configurations. `HAProxy` is bound to port number `80`.
   ```sh
   $ cd discovery-agent
   $ docker build -t discovery-agent .
